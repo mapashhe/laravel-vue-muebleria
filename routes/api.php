@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\MuebleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
                     VVVV
 */
 Route::resource("categorias", CategoriaController::class)->only(["store", "index", "show", "update", "destroy"]);
+Route::resource("muebles", MuebleController::class)->only(["store", "index", "show", "update", "destroy"]);
