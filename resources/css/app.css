@@ -1,0 +1,32 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css');
+.container { 
+    padding-top: 1em;
+}
+
+.miTabla{
+    width: 100%;
+}
+
+.tablaOption{
+    text-align: center;
+    width: 5%;
+}
+
+.delicon {
+    cursor: pointer;
+  }
+.delicon:hover {
+    color: red;
+  }
+.edicon {
+    cursor: pointer;
+  }
+.edicon:hover {
+    color: rgb(47, 215, 47);
+  }
+
+  .router-link-exact-active {
+    border-bottom: 1px solid #123456;
+}
