@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\MuebleController;
+use App\Http\Controllers\VenderMuebleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 */
 Route::resource("categorias", CategoriaController::class)->only(["store", "index", "show", "update", "destroy"]);
 Route::resource("muebles", MuebleController::class)->only(["store", "index", "show", "update", "destroy"]);
+Route::get("muebles/vender/{id}", VenderMuebleController::class);

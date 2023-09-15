@@ -9,6 +9,8 @@ class Mueble extends Model
 {
     use HasFactory;
     public $timestamps = false;
-
-    protected $fillable = ["nombre", "descripcion", "precio", "creado", "terminado", "disponible", "foto1", "foto2", "foto3", "foto4"];
+    protected $fillable = ["nombre", "descripcion", "precio", "creado", "terminado", "disponible", "foto1", "foto2", "foto3", "foto4", "id_categoria"];
+    public function categorias(){
+        return $this->belongsTo(Categoria::class, "id_categoria");
+    }
 }

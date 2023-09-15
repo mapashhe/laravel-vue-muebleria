@@ -9,7 +9,7 @@ class MuebleController extends Controller
 {
     public function index()
     {
-        return response()->json(Mueble::all());
+        return response()->json(Mueble::with("Categorias")->get());
     }
 
     public function store(Request $request)
@@ -23,9 +23,9 @@ class MuebleController extends Controller
         return response()->json($mueble);
     }
 
-    public function update(Request $request, Mueble $mueble)
+    public function update(Mueble $mueble,Request $request)
     {
-        $mueble->fill($request->post());
+        $mueble->fill($request->post())->save();
         return response()->json($mueble);
     }
 

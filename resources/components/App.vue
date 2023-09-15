@@ -16,6 +16,9 @@
                 <li class="nav-item">
                     <router-link  :to="{name: 'vercategorias'}" class="nav-link">Categorías</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link  :to="{name: 'vermuebles'}" class="nav-link">Muebles</router-link>
+                </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown

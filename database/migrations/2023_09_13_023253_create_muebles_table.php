@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string("foto2")->nullable();
             $table->string("foto3")->nullable();
             $table->string("foto4")->nullable();
+            $table->unsignedBigInteger("id_categoria");
+            $table->foreign('id_categoria')->references('id')->on('categorias');
         });
     }
 

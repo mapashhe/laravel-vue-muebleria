@@ -27,10 +27,10 @@
                         <tr v-for="(categoria, index) in categorias" :key="index">
                             <td class="tablaOption">{{index+1}}</td>
                             <td>{{categoria.nombre}}</td>
-                            <td class="tablaOption edicon">
-                                <i class="fa-solid fa-pencil" @click="router.push({path: `/admin/categorias/editar/${categoria.id}`})"></i>
+                            <td class="tablaOption edicon" @click="router.push({path: `/admin/categorias/editar/${categoria.id}`})">
+                                <i class="fa-solid fa-pencil"></i>
                             </td>
-                            <td class="tablaOption delicon"><i class="fa-solid fa-trash-can" @click="eliminalo(categoria.id)"></i></td>
+                            <td class="tablaOption delicon" @click="eliminalo(categoria.id)"><i class="fa-solid fa-trash-can"></i></td>
                         </tr>
                     </tbody>
                 </table>

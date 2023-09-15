@@ -7,6 +7,10 @@ const mostrarCate = () =>  import('../components/categorias/Mostrar.vue')
 const nuevaCate = () =>  import('../components/categorias/Crear.vue') 
 const editarCate = () =>  import('../components/categorias/Editar.vue') 
 
+const mostrarMueble = () =>  import('../components/muebles/Mostrar.vue')
+const nuevoMueble = () =>  import('../components/muebles/Crear.vue')
+const editarMueble = () =>  import('../components/muebles/Editar.vue')
+
 
 const routes = [
 
@@ -20,6 +24,8 @@ const routes = [
         path: "/contacto",
         component: contacto
     },
+
+
     {
         name: "vercategorias",
         path: "/admin/categorias/ver",
@@ -36,6 +42,26 @@ const routes = [
         component: editarCate,
         props: true
     },
+
+
+    {
+        name: "vermuebles",
+        path: "/admin/muebles/ver",
+        component: mostrarMueble
+    },
+    {
+        name: "nuevomueble",
+        path: "/admin/muebles/crear",
+        component: nuevoMueble
+    },
+    {
+        name: "editarmueble",
+        path: "/admin/muebles/editar/:id",
+        component: editarMueble,
+        props: true
+    },
+
+
 
 ]
 

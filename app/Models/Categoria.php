@@ -10,4 +10,9 @@ class Categoria extends Model
     use HasFactory;
     public $timestamps = false;
     protected $fillable = ["nombre"];
+
+    public function muebles(){
+        return $this->hasMany(Mueble::class, "id");
+    }
+
 }
